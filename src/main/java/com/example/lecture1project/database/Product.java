@@ -7,16 +7,16 @@ import java.util.List;
 public class Product {
 
     private int id;
-    private String itemName;
-    private int itemPrice;
-    private int itemQuantity;
+    private String productName;
+    private int productPrice;
+    private int productQuantity;
 
 
-    public Product(int id, String itemName, int itemPrice, int itemQuantity) {
+    public Product(int id, String productName, int productPrice, int productQuantity) {
         this.id = id;
-        this.itemName = itemName;
-        this.itemPrice = itemPrice;
-        this.itemQuantity = itemQuantity;
+        this.productName = productName;
+        this.productPrice = productPrice;
+        this.productQuantity = productQuantity;
     }
 
     public static List<Product> getItems() {
@@ -33,7 +33,7 @@ public class Product {
 
 
     public String toString() {
-        return "Id: " + id + " Item: " + itemName + " Price: " + itemPrice + " KZT Quantity: " + itemQuantity;
+        return "Id: " + id + " Item: " + productName + " Price: " + productPrice + " KZT Quantity: " + productQuantity;
     }
 
     public int getId() {
@@ -45,27 +45,27 @@ public class Product {
     }
 
     public String getItemName() {
-        return itemName;
+        return productName;
     }
 
-    public void setItemName(String itemName) {
-        this.itemName = itemName;
+    public void setItemName(String productName) {
+        this.productName = productName;
     }
 
     public double getItemPrice() {
-        return itemPrice;
+        return productPrice;
     }
 
-    public void setItemPrice(int itemPrice) {
-        this.itemPrice = itemPrice;
+    public void setItemPrice(int productPrice) {
+        this.productPrice = productPrice;
     }
 
     public int getItemQuantity() {
-        return itemQuantity;
+        return productQuantity;
     }
 
-    public void setItemQuantity(int itemQuantity) {
-        this.itemQuantity = itemQuantity;
+    public void setItemQuantity(int productQuantity) {
+        this.productQuantity = productQuantity;
     }
 
     private static int idCounter;

@@ -10,7 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
 
 // This AppleShopService class are necessary for working with our three repositories.
-// As only one constructor might have @Autowired annotation, @Autowired will be switched on/off for relevant constructor
+// As only one constructor might have @Autowired annotation, @Autowired should be switched on/off for relevant constructor and it is not convenient.
+// Therefore, I have used setter-based injection of DI
 
 @org.springframework.stereotype.Service
 public class AppleShopService {
@@ -19,7 +20,7 @@ public class AppleShopService {
     private TasksRepository tasksRepository;
 
     @Autowired
-    public AppleShopService(ProductsRepository productsRepository) {
+    public void setProductsRepository(ProductsRepository productsRepository) {
         this.productsRepository = productsRepository;
     }
 
@@ -27,8 +28,8 @@ public class AppleShopService {
         return productsRepository.findProducts();
     }
 
-    //@Autowired
-    public AppleShopService(ClientsRepository clientsRepository) {
+    @Autowired
+    public void setClientsRepository(ClientsRepository clientsRepository) {
         this.clientsRepository = clientsRepository;
     }
 
@@ -36,12 +37,12 @@ public class AppleShopService {
         return  clientsRepository.findClients();
     }
 
-    //@Autowired
-    public AppleShopService(TasksRepository tasksRepository) {
+    @Autowired
+    public void setTasksRepository(TasksRepository tasksRepository) {
         this.tasksRepository = tasksRepository;
     }
-
     public List<Service> getAllTasks() {
         return tasksRepository.findTasks();
     }
+
 }

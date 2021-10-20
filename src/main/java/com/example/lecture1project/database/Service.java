@@ -6,13 +6,13 @@ import java.util.List;
 // This Service is intended for creating the list of services provided by shop
 public class Service {
     private String task;
-    private String customer;
+    private String product;
     private int cost;
 
 
-    public Service(String task, String customer, int cost) {
+    public Service(String task, String product, int cost) {
         this.task = task;
-        this.customer = customer;
+        this.product = product;
         this.cost = cost;
     }
 
@@ -32,7 +32,7 @@ public class Service {
     public String toString() {
         return "Task{" +
                 "task='" + task + '\'' +
-                ", customer='" + customer + '\'' +
+                ", customer='" + product + '\'' +
                 ", cost=" + cost +
                 " KZT }";
     }
@@ -46,11 +46,11 @@ public class Service {
     }
 
     public String getCustomer() {
-        return customer;
+        return product;
     }
 
     public void setCustomer(String customer) {
-        this.customer = customer;
+        this.product = customer;
     }
 
     public int getCost() {
