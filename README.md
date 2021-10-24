@@ -6,3 +6,6 @@ This project utilizes an In-memory databases H2 for storing and working with my 
 
 Another task for this practice was the addition of AOP configuration and implementation of different advices. I have made AOP configuration using Java annotations, more specifically, added @EnableAspectJAutoProxy and  @ComponentScan annotation to Java config file. Also, created Aspect class containing advices and poincuts. I have implemented before and after advices for 2 methods in TestingJDBCAndAOP class.
 
+
+This project is also available at: https://github.com/aigulsharip/Lecture2Project2 (in the case of errors). I have developed this practice 2 project as separate project and uploaded its files on practice2 branch of current repository.
+
