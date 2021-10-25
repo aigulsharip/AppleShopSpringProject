@@ -41,9 +41,10 @@ public class JdbcProductDao implements ProductDAO {
 
     }
 
-    public String checkAroundAdvice() {
+    public String checkAfterAdvice() {
         return "This method for checking Around Advice";
     }
+
 
 }
 

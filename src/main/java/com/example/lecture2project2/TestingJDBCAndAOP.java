@@ -15,10 +15,10 @@ public class TestingJDBCAndAOP {
         System.out.println("The name of product with 1st ID " +
                 productDAO.findProductById(1));
 
-        System.out.println("***************************");
+        System.out.println("************************************");
 
 
-        System.out.println(productDAO.checkAroundAdvice());
+        System.out.println(productDAO.checkAfterAdvice());
 
         String client = "Peter";
         System.out.println(client + " submitted * " + productDAO.findProductByClientName("Peter") + " * for repair or other service");

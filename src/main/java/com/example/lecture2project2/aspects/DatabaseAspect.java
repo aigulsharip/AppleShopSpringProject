@@ -13,8 +13,8 @@ public class DatabaseAspect {
     }
 
 
-    @After("execution(public String checkAroundAdvice())")
-    public void checkAroundAdvice () {
+    @After("execution(public String checkAfterAdvice())")
+    public void checkAfterAdvice () {
         System.out.println("This message will be printed after checkAroundAdvice method");
     }
 

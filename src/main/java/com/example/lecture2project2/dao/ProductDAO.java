@@ -9,6 +9,6 @@ public interface ProductDAO {
     String findProductById(int id);
     String findProductByClientName(String name);
     String findEmailOfClient (String name);
-    String checkAroundAdvice();
+    String checkAfterAdvice();
 
 }
