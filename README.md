@@ -1,17 +1,11 @@
-# Lecture1Project
+# Lecture2Project
 
-This Java project was created with support of Spring Framework. This is prototype of Apple shop, it contains three databases of products, clients and services (provided by shop). 
+In this project, I have modified existing project from Lecture1. I have added one-to-many relationship that was lacking in previous version of project. 
 
-First, three databases was created and filled up with some information. These tables are linked by at least one column (product name), but their connections are implicit for now.
+This project utilizes an In-memory databases H2 for storing and working with my databases, containing three tables: Product, Client and Service. JDBC template have been used to connect and work with database. I have used examples from Chapter 7 of Pro Spring 5 for making configuration of JDBC and connecting to H2 database. Connecting to H2 console was relatively easy, but configurating JDBC template and working with it required some time and effort. 
 
-Then, 3 repository interfaces have been created for 3 DTO class and various implementation of interfaces was established. ProductsRepository have 2 implementation of interface, therefore, @Primary annotation should be used.
+Another task for this practice was the addition of AOP configuration and implementation of different advices. I have made AOP configuration using Java annotations, more specifically, added @EnableAspectJAutoProxy and  @ComponentScan annotation to Java config file. Also, created Aspect class containing advices and poincuts. I have implemented before and after advices for 2 methods in TestingJDBCAndAOP class.
 
-Later, AppleShopService class representing service class was created for working with our three repositories. As only one constructor might have @Autowired annotation, @Autowired will be switched on/off for relevant constructor 
-and it is not convenient. Therefore, I have used setter-based injection of DI
 
-Lastly, MainProject1Application class uses our service class and output selected database to console. Since I am using one service class, it is necessary to choose necassary implementation out of three, 
-as we have only one Service class for three interfaces, I have decided to use setter-based injection of DI. The list of tables have been printed to console.
-
-Editted from practice2 branch
-
+This project is also available at: https://github.com/aigulsharip/Lecture2Project2 (in the case of errors). I have developed this practice 2 project as separate project and uploaded its files on practice2 branch of current repository.
 
