@@ -1,11 +1,7 @@
-# Lecture2Project
+# Lecture#Project
 
-In this project, I have modified existing project from Lecture1. I have added one-to-many relationship that was lacking in previous version of project. 
+In this project, I have modified existing project from Practice2.
 
-This project utilizes an In-memory databases H2 for storing and working with my databases, containing three tables: Product, Client and Service. JDBC template have been used to connect and work with database. I have used examples from Chapter 7 of Pro Spring 5 for making configuration of JDBC and connecting to H2 database. Connecting to H2 console was relatively easy, but configurating JDBC template and working with it required some time and effort. 
-
-Another task for this practice was the addition of AOP configuration and implementation of different advices. I have made AOP configuration using Java annotations, more specifically, added @EnableAspectJAutoProxy and  @ComponentScan annotation to Java config file. Also, created Aspect class containing advices and poincuts. I have implemented before and after advices for 2 methods in TestingJDBCAndAOP class.
-
-
-This project is also available at: https://github.com/aigulsharip/Lecture2Project2 (in the case of errors). I have developed this practice 2 project as separate project and uploaded its files on practice2 branch of current repository.
+This project utilizes an in-memory databases H2 for storing and working with my databases, containing two tables: Product and Client. JDBC template was changed to Hibernate and JPA. For Product table,
+I used JPA for implementation of methods. For Client table, I added JPA repository (ClientRepository) and used for it for accessing table and implementing some methods. I added transaction managent to Client and Product class by adding @Transactional to the service class and @EnableJpaRepositories on configuration class. Finally, I create ProductAndClientTest class that test all the methods in Client and Product service class and the coverage is 100%.
 
