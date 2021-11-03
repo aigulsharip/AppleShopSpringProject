@@ -1,4 +1,4 @@
-# Lecture#Project
+# Lecture3Project
 
 In this project, I have modified existing project from Practice2.
 
