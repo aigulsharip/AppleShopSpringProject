@@ -13,8 +13,10 @@ import org.springframework.context.support.GenericApplicationContext;
 
 @SpringBootApplication
 public class Practice3JpaApplication {
+    public final String productNameWithFirstID = "";
 
     public static void main(String[] args) {
+
         ConfigurableApplicationContext ctx = SpringApplication.run(Practice3JpaApplication.class, args);
 
         //This configuration is also working
@@ -58,7 +60,13 @@ public class Practice3JpaApplication {
         // clientService.findAllClients().forEach(System.out::println);
 
 
+        //System.out.println(productService.findProductById(1L).getProductName());
+
+        String productNameWithFirstID = productService.findProductById(1L).getProductName();
+
         ctx.close();
+
+
 
 
     }
