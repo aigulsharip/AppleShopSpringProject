@@ -1,10 +1,13 @@
-# Lecture4Project
+# Lecture5Project
 
-In this project, I have modified existing project from Practice3.
+I have modified existing project from Practice4. This project utilizes an in-memory databases H2 for storing and working with my databases, containing two tables: Product and Client. 
+In this project, I have created controllers for Product and Client table using @RestController, where I have implemented basic Rest API and http methods.
 
-This project utilizes an in-memory databases H2 for storing and working with my databases, containing two tables: Product and Client. I used JPA and JPA repository for accessing table and implementing some methods. 
+Logging AOP was added to controllers for displaying request details (url, ip address and request type) using created @RestLog annotation and in-build methods of HttpServletRequest.
 
-The purpose of this practice was integration of Kafka to our project. First, I have downloaded and installed Kafka to my computer (version 2.12-2.3.0). Before using Kafka for our project, it should be started by initiating zookeeper and kafka server on command line. Then, configuration for kafka producer and consumer was done. I have created kafka package. In this folder, there are several class that helps running kafka. SpringBootKafkaApplication class should be runned to check the assigment.
+In this project, I have wrote Junit tests for ProductService. Also, JUnit tests and Integration test was written for Product controller. 
 
-Test class was  not changed from practice3 yet.
+I have implemented web security for ClientControllers in practice5security branch
+
+
 
