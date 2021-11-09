@@ -1,36 +1,20 @@
-package com.example.practice3jpa.entities;
+package com.example.practice5.entity;
 
-import javax.persistence.*;
-
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.io.Serializable;
 
-import static javax.persistence.GenerationType.AUTO;
-
 @Entity
-@Table(name = "client")
-
-@SqlResultSetMapping(
-        name="clientResult",
-        entities=@EntityResult(entityClass=Client.class)
-)
-
 
 public class Client implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = AUTO)
-    @Column(name = "ID")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @Column(name = "CLIENT_NAME")
     private String clientName;
 
-    @ManyToOne
-    @JoinColumn(name = "PRODUCT_ID")
-    private Product product;
-
-
-    @Column(name = "CLIENT_EMAIL")
     private String clientEmail;
 
     public Long getId() {
@@ -47,14 +31,6 @@ public class Client implements Serializable {
 
     public void setClientName(String clientName) {
         this.clientName = clientName;
-    }
-
-    public Product getProduct() {
-        return product;
-    }
-
-    public void setProduct(Product product) {
-        this.product = product;
     }
 
     public String getClientEmail() {

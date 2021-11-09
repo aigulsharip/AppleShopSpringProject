@@ -1,13 +1,13 @@
-package com.example.practice3jpa;
+package com.example.practice5;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Practice3JpaApplicationTests {
+class Practice5SpringRestMvcApplicationTests {
 
-    @Test
-    void contextLoads() {
-    }
+	@Test
+	void contextLoads() {
+	}
 
 }
