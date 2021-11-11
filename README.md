@@ -1,4 +1,4 @@
-# Lecture5Project
+# Lecture6Project
 
 I have modified existing project from Practice4. This project utilizes an in-memory databases H2 for storing and working with my databases, containing two tables: Product and Client. 
 In this project, I have created controllers for Product and Client table using @RestController, where I have implemented basic Rest API and http methods.
