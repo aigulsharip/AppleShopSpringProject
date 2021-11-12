@@ -1,0 +1,25 @@
+{
+  "type": "default",
+  "components": [
+    {
+      "key": "money",
+      "label": "Pack Cash",
+      "type": "textfield",
+      "description": "How much cash do you want to bring?",
+      "validate": {
+        "required": true,
+        "pattern": "^(?:0|[1-9][0-9]*)\\.[0-9]+$"
+      }
+    },
+    {
+      "key": "country",
+      "label": "Where are you headed",
+      "type": "textfield",
+      "description": "Country you are going",
+      "validate": {
+        "required": true,
+        "pattern": "America|France"
+      }
+    }
+  ]
+}
